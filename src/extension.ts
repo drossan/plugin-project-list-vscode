@@ -27,16 +27,17 @@ export function activate(context: vscode.ExtensionContext) {
 
 async function showDirectoryOptions(): Promise<{ dir: string, ignoredDirs: Set<string>, createFile: boolean } | undefined> {
 	const workspaceFolder = vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders[0].uri.fsPath : '';
+
+	if (!workspaceFolder) {
+		vscode.window.showErrorMessage('No workspace folder found. Please open a folder in VS Code.');
+		return undefined;
+	}
+
 	const dir = await vscode.window.showInputBox({ prompt: 'Enter the directory to list (default is project root):' }) || workspaceFolder;
 	const ignoredDirsInput = await vscode.window.showInputBox({ prompt: 'Enter directories to ignore, separated by commas (default is .git,node_modules,vendor,.idea,.vsc):' }) || '.git,node_modules,vendor,.idea,.vsc';
 	const ignoredDirs = new Set(ignoredDirsInput.split(',').map(s => s.trim()));
 	const createFileSelection = await vscode.window.showQuickPick(['Yes', 'No'], { placeHolder: 'Create file list_dir_output.txt?' });
 	const createFile = createFileSelection === 'Yes';
-
-	if (!dir) {
-		vscode.window.showErrorMessage('Directory cannot be empty.');
-		return undefined;
-	}
 
 	return { dir, ignoredDirs, createFile };
 }
