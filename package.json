@@ -1,8 +1,10 @@
 {
   "name": "project-list",
   "displayName": "Project list",
+  "publisher": "drossan",
   "description": "A plugin to list files and directories with options to ignore specific directories.",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -14,8 +16,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "project-list.helloWorld",
-        "title": "Hello World"
+        "command": "extension.listDir",
+        "title": "List Directory"
       }
     ]
   },

@@ -1,71 +1,61 @@
-# project-list README
+# Project List
 
-This is the README for your extension "project-list". After writing up a brief description, we recommend including the following sections.
+## Description
+
+My VS Code Extension is a simple tool that lists the contents of a directory in a tree structure. It allows you to specify which directories to ignore and optionally saves the listing to a file.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- List directory contents in a tree structure.
+- Ignore specified directories.
+- Optionally save the listing to a file.
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+### Installation
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Download and install [Visual Studio Code](https://code.visualstudio.com/).
+2. Go to the Extensions view by clicking the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
+3. Search for `My VS Code Extension` and click Install.
 
-## Requirements
+### Running the Extension
+1. **Open the Command Palette**:
+    - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS) to open the Command Palette.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+2. **Execute the Command**:
+    - Type `List Directory` and select the command `List Directory` from the list.
 
-## Extension Settings
+3. **Follow the Prompts**:
+    - Enter the directory to list (default is the project root).
+    - Enter directories to ignore, separated by commas (default is `.git,node_modules,vendor,.idea,.vsc`).
+    - Choose whether to create a file named `list_dir_output.txt` in the project root.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+4. **View the Results**:
+    - If you chose to create the file, you will see a confirmation message, and the file `list_dir_output.txt` will be created in the project root with the directory listing.
+    - The directory listing will also be displayed in a new webview panel within VS Code.
 
-For example:
 
-This extension contributes the following settings:
+## Commands
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- `extension.listDir`: Lists the contents of a directory.
 
-## Known Issues
+## Configuration
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+You can configure the following settings in the prompts:
+- Directory to list (default is the project root).
+- Directories to ignore, separated by commas (default is `.git,node_modules,vendor,.idea,.vsc`).
+- Whether to create a file named `list_dir_output.txt` in the project root.
 
-## Release Notes
+## Installation
 
-Users appreciate release notes as you update your extension.
+1. Download and install [Visual Studio Code](https://code.visualstudio.com/).
+2. Go to the Extensions view by clicking the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
+3. Search for `Project List` and click Install.
 
-### 1.0.0
+## Contributing
 
-Initial release of ...
+Contributions are welcome! Please fork the repository and submit a pull request.
 
-### 1.0.1
+## License
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/drossan/plugin-project-list-vscode) file for details.
