@@ -16,7 +16,7 @@ My VS Code Extension is a simple tool that lists the contents of a directory in 
 
 1. Download and install [Visual Studio Code](https://code.visualstudio.com/).
 2. Go to the Extensions view by clicking the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
-3. Search for `My VS Code Extension` and click Install.
+3. Search for `Project List` and click Install.
 
 ### Running the Extension
 1. **Open the Command Palette**:
@@ -40,17 +40,11 @@ My VS Code Extension is a simple tool that lists the contents of a directory in 
 - `extension.listDir`: Lists the contents of a directory.
 
 ## Configuration
-
 You can configure the following settings in the prompts:
 - Directory to list (default is the project root).
 - Directories to ignore, separated by commas (default is `.git,node_modules,vendor,.idea,.vsc`).
 - Whether to create a file named `list_dir_output.txt` in the project root.
 
-## Installation
-
-1. Download and install [Visual Studio Code](https://code.visualstudio.com/).
-2. Go to the Extensions view by clicking the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X`.
-3. Search for `Project List` and click Install.
 
 ## Contributing
 
