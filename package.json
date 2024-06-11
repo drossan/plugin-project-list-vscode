@@ -3,10 +3,14 @@
   "displayName": "Project list",
   "publisher": "drossan",
   "description": "A plugin to list files and directories with options to ignore specific directories.",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.90.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drossan/plugin-project-list-vscode"
   },
   "categories": [
     "Other"

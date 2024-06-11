@@ -40,11 +40,11 @@ My VS Code Extension is a simple tool that lists the contents of a directory in 
 - `extension.listDir`: Lists the contents of a directory.
 
 ## Configuration
+
 You can configure the following settings in the prompts:
 - Directory to list (default is the project root).
 - Directories to ignore, separated by commas (default is `.git,node_modules,vendor,.idea,.vsc`).
 - Whether to create a file named `list_dir_output.txt` in the project root.
-
 
 ## Contributing
 
